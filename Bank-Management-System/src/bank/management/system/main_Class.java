@@ -32,12 +32,14 @@ public class main_Class extends JFrame implements ActionListener{
         b1.addActionListener(this);
         l3.add(b1);
 
-        b2 = new JButton("CASH WITHDRAWL");
+        b2 = new JButton("CASH WITHDRAWAL");
         b2.setForeground(Color.WHITE);
         b2.setBackground(new Color(65,125,128));
         b2.setBounds(447,223,145,30);
+        b2.setFont(new Font("Arial", Font.BOLD, 11)); // ↓↓↓ Small text size
         b2.addActionListener(this);
         l3.add(b2);
+
 
         b3 = new JButton("FAST CASH");
         b3.setForeground(Color.WHITE);
@@ -90,10 +92,10 @@ public class main_Class extends JFrame implements ActionListener{
         } else if(e.getSource()==b7) {
             System.exit(0);
         } else if(e.getSource()==b2) {
-            new Withdrawl(pin);
+            new Withdrawal(pin);
             setVisible(false);
         } else if (e.getSource()==b6) {
-            new BalanceEnquriy(pin);
+            new BalanceEnquiry(pin);
             setVisible(false);
         }else if(e.getSource()==b3){
             new FastCash(pin);

@@ -20,7 +20,7 @@ public class FastCash extends JFrame implements ActionListener {
         l3.setBounds(0,0,1050,690);
         add(l3);
 
-        JLabel label1 = new JLabel("SELECT WITHDRAWL AMOUNT");
+        JLabel label1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
         label1.setForeground(Color.WHITE);
         label1.setFont(new Font("System", Font.BOLD, 18));
         label1.setBounds(260,130,400,35);
@@ -104,11 +104,11 @@ public class FastCash extends JFrame implements ActionListener {
                 }
 
                 if (e.getSource() != b7 && balance < Integer.parseInt(amount)) {
-                    JOptionPane.showMessageDialog(null, "Insuffient Balance");
+                    JOptionPane.showMessageDialog(null, "Insufficient Balance");
                     return;
                 }
 
-                c.statement.executeUpdate("insert into bank values('" + pin + "','" + date + "', 'withdrawl', '" + amount + "')");
+                c.statement.executeUpdate("insert into bank values('" + pin + "','" + date + "', 'withdrawal', '" + amount + "')");
                 JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
             } catch (Exception E) {
                 E.printStackTrace();

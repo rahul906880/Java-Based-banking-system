@@ -6,11 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
-public class BalanceEnquriy extends JFrame implements ActionListener {
+public class BalanceEnquiry extends JFrame implements ActionListener {
     String pin;
     JLabel label2;
     JButton b1;
-    BalanceEnquriy(String pin){
+    BalanceEnquiry(String pin){
         this.pin=pin;
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/atm2.png"));
@@ -72,6 +72,6 @@ public class BalanceEnquriy extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new BalanceEnquriy("");
+        new BalanceEnquiry("");
     }
 }

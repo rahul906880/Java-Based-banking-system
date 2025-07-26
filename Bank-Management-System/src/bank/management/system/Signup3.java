@@ -33,7 +33,7 @@ public class Signup3 extends JFrame implements ActionListener {
         l2.setBounds(335, 35, 400, 40);
         add(l2);
 
-        JLabel l3 = new JLabel("Accounts Type:");
+        JLabel l3 = new JLabel("Account Type:");
         l3.setFont(new Font("Raleway", Font.BOLD, 22));
         l3.setBounds(100, 140, 200, 30);
         add(l3);

@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.Date;
 
-public class Withdrawl extends JFrame implements ActionListener {
+public class Withdrawal extends JFrame implements ActionListener {
 
     String pin;
     TextField textField;
 
     JButton b1, b2;
-    Withdrawl(String pin){
+    Withdrawal(String pin){
         this.pin=pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/atm2.png"));
         Image i2 = i1.getImage().getScaledInstance(1350,700,Image.SCALE_DEFAULT);
@@ -82,11 +82,11 @@ public class Withdrawl extends JFrame implements ActionListener {
                         }
                     }
                     if (balance < Integer.parseInt(amount)) {
-                        JOptionPane.showMessageDialog(null, "Insuffient Balance");
+                        JOptionPane.showMessageDialog(null, "Insufficient Balance");
                         return;
                     }
 
-                    c.statement.executeUpdate("insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "' )");
+                    c.statement.executeUpdate("insert into bank values('" + pin + "', '" + date + "', 'Withdrawal', '" + amount + "' )");
                     JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
                     setVisible(false);
                     new main_Class(pin);
@@ -102,6 +102,6 @@ public class Withdrawl extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Withdrawl("");
+        new Withdrawal("");
     }
 }
